@@ -1,0 +1,38 @@
+import java.util.*;
+import java.io.*;
+
+public class Lab6{
+    
+    public static void main(String []args){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Please enter how many completed: Practice problems, labs, and both scores of your midterm: ");
+        
+        while (scan.hasNext()){
+            Grades grade = new Grades();
+            grade.Grades();
+    
+            double total = grade.totals();
+            System.out.println("Your grade is: " + total + "/74");
+        }
+     }
+}
+class Grades{
+    Scanner sc = new Scanner(System.in);
+    double labs, pProb, midterm1, midterm2, labsTot, pTot, tot;
+
+    public void Grades(){
+       // System.out.println("Please enter how many completed: Practice problems, labs, and both scores of your midterm: ");
+    }
+    public void numbers(){
+        this.pProb = sc.nextDouble();
+        this.labs = sc.nextDouble();
+        this.midterm1 = sc.nextDouble();
+        this.midterm2 = sc.nextDouble();
+    }
+    public double totals(){
+        this.pTot=(pProb*6);
+        this.labsTot = (labs*6);
+        tot = pTot + labsTot + midterm1 + midterm2;
+        return tot;
+    }
+}
