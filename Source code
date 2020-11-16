@@ -32,7 +32,7 @@ class Grades{
     public double totals(){
         this.pTot=(pProb*6);
         this.labsTot = (labs*6);
-        tot = pTot + labsTot + midterm1 + midterm2;
+        tot = pTot + labsTot + midterm1 + midterm2 + 2;
         return tot;
     }
 }
